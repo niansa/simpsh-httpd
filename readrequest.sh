@@ -1,12 +1,10 @@
 #! /bin/bash
 
-# Standard-URL
-export URL='/'
-
 # Lese den request
-read $request
+read $header
 
 # Verarbeite den request
-URL="${request#GET }"
+URL="${header#GET }"
 URL="${URL% HTTP/*}"
 export FILE="$FILES$URL"
+echo $URL
