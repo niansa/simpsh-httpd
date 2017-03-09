@@ -10,5 +10,5 @@ An usable bash-httpserver with easy configuration and PHP.
   * `$ git clone https://github.com/niansa/simpsh-httpd.git`
   * `$ cd ./simpsh-httpd`
 3. Edit config.sh:
- * `FILES` Here is the Webroot
- * `
+ * `FILES` Here is the webroot (homefolder for the website)
+ * `HTMLTITLE` This is the title for the filelist
