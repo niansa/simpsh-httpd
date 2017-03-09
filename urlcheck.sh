@@ -1,6 +1,13 @@
 #! /bin/bash
 
-# Überprüfe auf Versuche, das restliche Dateisystem zu lesen
+# Blockiere Versuche, das restliche Dateisystem zu lesen
 if [ "$URL" = "*..*" ]; then
 	export URL='/'
+	export FILE="$FILES"
+fi
+
+# Verhindere "/"-bug
+if [ -d "$FILE" -a "$FILE" != "*/" ]; then
+	export URL="$URL"'/'
+	export FILE="$FILE"'/'
 fi
