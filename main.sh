@@ -18,5 +18,8 @@
 # Verwende unix2dos auf das Dokument...
 unix2dos $HTMLFILE &> /dev/null
 
-# Gebe fertiges HTML-Dokument aus
+# Gebe fertiges Dokument aus
 cat $HTMLFILE
+
+# Lösche Dokument
+rm -f $HTMLFILE
