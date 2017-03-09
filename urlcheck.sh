@@ -8,6 +8,8 @@ fi
 
 # Verhindere "/"-bug
 if [ -d "$FILE" -a "$FILE" != "*/" ]; then
-	export URL="$URL"'/'
-	export FILE="$FILE"'/'
+	newURL="$URL"'/'
+	export URL="$newURL"
+	newFILE="$FILE"'/'
+	export FILE="$newFILE"
 fi
