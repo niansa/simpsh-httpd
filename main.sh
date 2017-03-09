@@ -9,9 +9,6 @@
 # Lese HTTP-Anfrage
 . ./readrequest.sh
 
-# Lese configdatei erneut
-. ./config.sh
-
 # Eine kurze sicherheutsüberprüfung...
 . ./urlcheck.sh
 
