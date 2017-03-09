@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Wo ist der zu nutzende Speicherplatz?
-export FILES="/var/www/html"
+export WEBROOT="/var/www/html"
 
 # Wie soll der titel der Seite sein, die aufgerufene URL ist in $URL enthalten
 export HTMLTITLE="Datei: $URL"
