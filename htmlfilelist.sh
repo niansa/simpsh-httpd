@@ -10,11 +10,11 @@ echo '<html>
 	<body>
 		<p>'"$status"'</p>
 		<h2>Directory list:</h2><br />
-		<a href="'"${WEBSITE}${URL}/../"'">..</a><br />' >> $HTMLFILE
+		<a href="../">..</a><br />' >> $HTMLFILE
 
 # Erstelle Dateiliste im HTML-Format
 for i in $( ls "${FILE}" ); do
-	echo '		<a href="'"${WEBSITE}${URL}/${i}"'">'"${i}"'</a><br />' >> $HTMLFILE
+	echo '		<a href="./'"${i}"'">'"${i}"'</a><br />' >> $HTMLFILE
 done
 
 # Statisches HTML
