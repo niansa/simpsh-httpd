@@ -8,8 +8,12 @@ fi
 
 # Verhindere "/"-bug
 if [ -d "$FILE" ]; then
-	newURL="$URL"'/'
-	export URL="$newURL"
-	newFILE="$FILE"'/'
-	export FILE="$newFILE"
+if [[ "$URL" != */ ]]; then
+	#newURL="$URL"'/'
+	#export URL="$newURL"
+	#newFILE="$FILE"'/'
+	#export FILE="$newFILE"
+	echo 'HTTP/1.0 302 Moved permanently
+	Location: '"${WEBSITE}${URL}"'/'
+fi
 fi
