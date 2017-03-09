@@ -9,4 +9,6 @@ An usable bash-httpserver with easy configuration and PHP.
 2. Download simpsh-httpd:
   * `$ git clone https://github.com/niansa/simpsh-httpd.git`
   * `$ cd ./simpsh-httpd`
-3. 
+3. Edit config.sh:
+ * `FILES` Here is the Webroot
+ * `
