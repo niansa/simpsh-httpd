@@ -5,10 +5,11 @@ An usable bash-httpserver with easy configuration and PHP.
 
 ### Installation
 
-1. Install following packages: bash socat (Debian/Ubuntu: $ sudo apt install bash socat)
+1. Install following packages: bash socat
 2. Download simpsh-httpd:
-  * `$ git clone https://github.com/niansa/simpsh-httpd.git`
-  * `$ cd ./simpsh-httpd`
+ * `$ cd ~`
+ * `$ git clone https://github.com/niansa/simpsh-httpd.git`
+ * `$ cd ./simpsh-httpd`
 3. Edit config.sh:
  * `FILES` Here is the webroot (homefolder for the website).
  * `HTMLTITLE` This is the title for the filelist.
@@ -16,3 +17,9 @@ An usable bash-httpserver with easy configuration and PHP.
  * `DEFAULTCONTENT` This Content-Type will used for unknown files.
  * `PORT` This port will used for listening.
  * `WEBSITE` This is the URL of the Website (Example: "http://localhost:$PORT")
+4. Make all files executable
+ * `chmod ~/simpsh-httpd/* +x`
+5. Start simpsh-httpd:
+ * `cd ~/simpsh-httpd`
+ * `./start-socat.sh`
+6. Have fun with simpsh-httpd!
