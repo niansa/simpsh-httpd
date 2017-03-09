@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Wo ist der Webroot (Hauptverzeichniss)?
-export WEBROOT="/var/www/html"
+export FILES="/var/www/html"
 
 # Wie soll der Titel der Dateiliste sein, die aufgerufene URL ist in $URL enthalten.
 export HTMLTITLE="Datei: $URL"
