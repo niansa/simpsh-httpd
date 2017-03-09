@@ -7,7 +7,7 @@ export WEBROOT="/var/www/html"
 export HTMLTITLE="Datei: $URL"
 
 # Wo soll das Fertige HTML-Dokument gespeichert werden? Die Variable $HTMLFILEID muss enthalten sein!
-export HTMLFILE="/tmp/storage.${HTMLFILEID}.html"
+export HTMLFILE="/tmp/simpsh-html.${HTMLFILEID}.html"
 
 # Welcher Content-Type soll bei einer Unbekannten Datei gesendet werden?
 export DEFAULTCONTENT="text/html"
