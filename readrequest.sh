@@ -1,14 +1,9 @@
 #! /bin/bash
 
-# Notwendige Variablen definieren
-header=' '
-
-# Falls im nächsten Bereich keine Datein ausgewertet werden, bleiben folgende Variablen gesetzt
+# Standard-URL
 export URL='/'
 
-# Lese anfrage...
-read header
-
+# Verarbeite den request
 URL="${header#GET }"
 URL="${URL% HTTP/*}"
 export FILE="$FILES$URL"
