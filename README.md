@@ -15,4 +15,4 @@ An usable bash-httpserver with easy configuration and PHP.
  * `HTMLFILE` The finished Document will saved here. ${HTMLFILEID} must be included!
  * `DEFAULTCONTENT` This Content-Type will used for unknown files.
  * `PORT` This port will used for listening.
- 
+ * `WEBSITE` This is the URL of the Website (Example: "http://localhost:$PORT")
