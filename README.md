@@ -5,7 +5,7 @@ An usable bash-httpserver with easy configuration and PHP.
 
 ### Installation
 
-1. Install following packages: bash socat
+1. Install following packages: bash socat dos2unix
 2. Download simpsh-httpd:
  * `$ cd ~`
  * `$ git clone https://github.com/niansa/simpsh-httpd.git`
