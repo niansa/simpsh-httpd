@@ -14,7 +14,7 @@ An usable bash-httpserver with easy configuration and PHP.
  * `FILES` Here is the webroot (homefolder for the website).
  * `HTMLTITLE` This is the title for the filelist.
  * `HTMLFILE` The finished Document will saved here. ${HTMLFILEID} must be included!
- * `DEFAULTCONTENT` This Content-Type will used for unknown files.
+ * `DEFAULTCONTENT` This Content-Type send the Server, if the requested File isn't a folder or phpfile.
  * `PORT` This port will used for listening.
  * `WEBSITE` This is the URL of the Website (Example: "http://localhost:$PORT")
 4. Make all files executable
