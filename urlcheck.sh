@@ -14,6 +14,6 @@ if [[ "$URL" != */ ]]; then
 	#newFILE="$FILE"'/'
 	#export FILE="$newFILE"
 	echo 'HTTP/1.0 302 Moved permanently
-	Location: '"${WEBSITE}${URL}"'/'
+Location: '"${WEBSITE}${URL}"'/'
 fi
 fi
