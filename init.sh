@@ -1,3 +1,3 @@
 #! /bin/bash
 
-export HTMLFILEID="$RANDOM"
+export OUTFILEID="$RANDOM"

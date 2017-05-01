@@ -12,11 +12,14 @@
 # Eine kurze sicherheutsüberprüfung...
 . ./urlcheck.sh
 
-# Schreibe fertiges HTML-Dokument
-. ./writehtml.sh
+# Wenn das Dokument schon fertig ist, dann den folgenden Schritt überspringen
+if [ "$DONE" != "true" ]; then
+	# Schreibe fertiges HTML-Dokument
+	. ./sendfile.sh
+fi
 
 # Verwende unix2dos auf das Dokument...
-unix2dos $HTMLFILE &> /dev/null
+unix2dos $OUTFILE &> /dev/null
 
 # Gebe fertiges HTML-Dokument aus
-cat $HTMLFILE
+cat $OUTFILE
