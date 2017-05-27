@@ -6,7 +6,7 @@
 
 # Überprüfe: Datei oder Verzeichniss?
 if [[ "$FILE" == *.php ]]; then
-	export CONTENTTYPE="html"
+	export CONTENTTYPE="text/html"
 	. ./httpheaders.sh
 	php "$FILE" >> $HTMLFILE
 elif [ -f "${FILE}" ]; then
@@ -14,7 +14,7 @@ elif [ -f "${FILE}" ]; then
 	. ./httpheaders.sh
 	cat "${FILE}" >> ${HTMLFILE}
 else
-	export CONTENTTYPE="html"
+	export CONTENTTYPE="text/html"
 	. ./httpheaders.sh
 	. ./htmlfilelist.sh
 fi
