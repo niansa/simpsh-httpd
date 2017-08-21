@@ -1,3 +1,4 @@
 #! /bin/bash
 
-export OUTFILEID="$RANDOM"
+STATUS="HTTP/1.0 200 OK"
+OUTFILEID="$RANDOM"

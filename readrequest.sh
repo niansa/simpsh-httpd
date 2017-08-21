@@ -6,4 +6,6 @@ read header
 # Verarbeite den request
 URL="${header#GET }"
 URL="${URL% HTTP/*}"
-export FILE="$FILES$URL"
+FILE="$FILES$URL"
+DECODED_FILE=$(printf '%b' "${FILE//%/\\x}")
+FILE="$DECODED_FILE"

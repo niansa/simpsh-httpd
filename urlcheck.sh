@@ -2,29 +2,36 @@
 
 # Blockiere Versuche, das restliche Dateisystem zu lesen
 if [[ "$URL" == *..* ]]; then
-	export URL='/'
-	export FILE="$FILES"
+	URL='/'
+	FILE="$FILES"
 fi
 
 # Verhindere "/"-bug
 if [ -d "$FILE" ]; then
 	if [[ "$URL" != */ ]]; then
-		export ANSWER='HTTP/1.0 302 Moved permanently
+		STATUS='HTTP/1.0 302 Moved permanently
 Location: '"${WEBSITE}${URL}"'/'
-		export CONTENTTYPE="$DEFAULTCONTENTTYPE"
+		CONTENTTYPE="$DEFAULTCONTENTTYPE"
 		. ./httpheaders.sh
-		export DONE=true
+		DONE=true
 	fi
 fi
 
-# Erkenne index.html
+# Finde index.html
 if [ -f "${FILE}index.html" ]; then
-	export URL="${URL}index.html"
-	export FILE="${FILE}index.html"
+	URL="${URL}index.html"
+	FILE="${FILE}index.html"
 fi
 
-# Erkenne index.php
+# Finde index.php
 if [ -f "${FILE}index.php" ]; then
-	export URL="${URL}index.php"
-	export FILE="${FILE}index.php"
+	URL="${URL}index.php"
+	FILE="${FILE}index.php"
+fi
+
+# Antworte 404 Not Found wenn Datei nicht existiert
+if [ ! -e "$FILE" ]; then
+        STATUS='HTTP/1.0 404 Not Found'
+        CONTENTTYPE='text/plain'
+	FILE="$ERROR404"
 fi

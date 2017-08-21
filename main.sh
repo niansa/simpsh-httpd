@@ -9,7 +9,7 @@
 # Lese HTTP-Anfrage
 . ./readrequest.sh
 
-# Eine kurze sicherheutsüberprüfung...
+# Und vieles andere...
 . ./urlcheck.sh
 
 # Wenn das Dokument schon fertig ist, dann den folgenden Schritt überspringen

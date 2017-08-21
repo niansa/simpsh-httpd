@@ -16,5 +16,5 @@ elif [ -f "${FILE}" ]; then
 else
 	export CONTENTTYPE="text/html"
 	. ./httpheaders.sh
-	. ./htmlfilelist.sh
+	. ./filelist.sh
 fi
