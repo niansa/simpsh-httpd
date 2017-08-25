@@ -37,7 +37,7 @@ if [ ! -e "$FILE" ]; then
 fi
 
 # Antworte 403 Forbidden wenn Datei nicht lesbar ist
-if [ ! -e "$FILE" ]; then
+if [ ! -r "$FILE" ]; then
         STATUS='HTTP/1.0 403 Forbidden'
         CONTENTTYPE='text/plain'
 	FILE="$ERROR403"
