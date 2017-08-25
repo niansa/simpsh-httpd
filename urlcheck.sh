@@ -32,13 +32,13 @@ fi
 # Antworte 404 Not Found wenn Datei nicht existiert
 if [ ! -e "$FILE" ]; then
         STATUS='HTTP/1.0 404 Not Found'
-        CONTENTTYPE='text/plain'
+        CONTENTTYPE='text/html'
 	FILE="$ERROR404"
 fi
 
 # Antworte 403 Forbidden wenn Datei nicht lesbar ist
 if [ ! -r "$FILE" ]; then
         STATUS='HTTP/1.0 403 Forbidden'
-        CONTENTTYPE='text/plain'
+        CONTENTTYPE='text/html'
 	FILE="$ERROR403"
 fi
