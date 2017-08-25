@@ -18,6 +18,6 @@ PORT=8888
 # Wie heisst die Webseite (URL des obersten Verzeichnis)?
 WEBSITE="http://localhost:$PORT"
 
-# Statuscode-Seiten (Müssen txt-Dateien sein)
-ERROR404="${FILES}/404.txt"
-ERROR403="${FILES}/403.txt"
+# Statuscode-Seiten (Müssen html-Dateien sein)
+ERROR404="${FILES}/404.html"
+ERROR403="${FILES}/403.html"
