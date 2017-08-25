@@ -35,3 +35,10 @@ if [ ! -e "$FILE" ]; then
         CONTENTTYPE='text/plain'
 	FILE="$ERROR404"
 fi
+
+# Antworte 403 Forbidden wenn Datei nicht lesbar ist
+if [ ! -e "$FILE" ]; then
+        STATUS='HTTP/1.0 403 Forbidden'
+        CONTENTTYPE='text/plain'
+	FILE="$ERROR403"
+fi
