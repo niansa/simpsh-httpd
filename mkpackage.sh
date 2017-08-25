@@ -1,5 +1,6 @@
 echo "Bitte warten... Please wait..."
-mv "$0" /tmp/mkpackage.sh-$$
+old0="$0"
+mv "$old0" /tmp/mkpackage.sh-$$
 mkdir "$2"
 cd "$2"
 mkdir etc
@@ -15,5 +16,5 @@ echo 'cd /usr/share/simpsh-httpd/
 mv usr/share/simpsh-httpd/config.sh etc/simpsh-httpd
 ln -sf etc/simpsh-httpd/config.sh usr/share/simpsh-httpd/config.sh
 chmod -R +x .
-mv /tmp/mkpackage.sh-$$ "$0"
+mv /tmp/mkpackage.sh-$$ "$old0"
 echo "Fertig! Done!"
