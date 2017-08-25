@@ -11,3 +11,5 @@ Architecture: all
 Depends: bash, socat
 Description: An usable bash-httpserver with easy configuration and very simple PHP' > ~/simpsh-httpd-pkg/DEBIAN/control
 dpkg -b ~/simpsh-httpd-pkg ~/simpsh-httpd.deb
+rm -rf ~/simpsh-httpd-pkg
+rm -rf ~/simpsh-httpd
