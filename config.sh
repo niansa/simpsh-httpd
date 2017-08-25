@@ -20,3 +20,4 @@ WEBSITE="http://localhost:$PORT"
 
 # Statuscode-Seiten (Müssen txt-Dateien sein)
 ERROR404="${FILES}/404.txt"
+ERROR403="${FILES}/403.txt"
