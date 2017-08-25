@@ -1,6 +1,6 @@
 echo "Bitte warten... Please wait..."
-mkdir package
-cd package
+mkdir "$2"
+cd "$2"
 mkdir etc
 mkdir etc/simpsh-httpd
 mkdir usr
