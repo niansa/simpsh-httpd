@@ -27,4 +27,4 @@ An usable bash-httpserver with easy configuration and PHP.
 6. Have fun with simpsh-httpd!
 
 
-Tip: You don't need to restart simpsh-httpd after update-/configchange!
+Tip: You don't need to restart simpsh-httpd after update/configchange!
