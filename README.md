@@ -16,7 +16,9 @@ An usable bash-httpserver with easy configuration and PHP.
  * `OUTFILE` The finished Document will saved here. ${OUTFILEID} must be included!
  * `DEFAULTCONTENTTYPE` This Content-Type send the Server, if the requested File isn't a folder or phpfile.
  * `PORT` This port will used for listening.
- * `WEBSITE` This is the URL of the Website (Example: "http://localhost:$PORT")
+ * `WEBSITE` This is the URL of the website (Example: "http://localhost:$PORT")
+ * `ERROR404` This is the error page 404
+ * `ERROR403` This is the error page 403
 4. Make all files executable
  * `chmod ~/simpsh-httpd/* +x`
 5. Start simpsh-httpd:
