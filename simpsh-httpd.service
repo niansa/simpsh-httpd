@@ -29,8 +29,9 @@ stop)   log_daemon_msg "Stoping simpsh-httpd" "simpsh-httpd"
         log_end_msg $?
         ;;
 restart) log_daemon_msg "Restarting simpsh-httpd" "simpsh-httpd" 
-        start-stop-daemon --start --quiet --name simpsh-httpd --startas /usr/bin/simpsh-httpd-socat -- $LSBNAMES
-        start-stop-daemon --stop --quiet --name simpsh-htpd
+        /etc/init.d/simpsh-httpd.sh stop
+        sleep 2
+        /etc/init.d/simpsh-httpd.sh start
         log_end_msg $?
         ;;
 *)      log_action_msg "Usage: /etc/init.d/cron {start|stop|restart|reload|force-reload}"
