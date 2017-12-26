@@ -21,11 +21,11 @@ test -f /usr/bin/simpsh-httpd-socat || exit 0
 
 case "$1" in
 start)  log_daemon_msg "Starting simpsh-httpd" "simpsh-httpd"
-        start-stop-daemon --start --quiet --name simpsh-httpd --startas /bin/bash /usr/bin/simpsh-httpd-socat -- $LSBNAMES
+        start-stop-daemon --start --quiet --name simpsh-httpd --pidfile /run/lock/simpsh-httpd.pid --startas /bin/bash /usr/bin/simpsh-httpd-socat -- $LSBNAMES
         log_end_msg $?
         ;;
 stop)   log_daemon_msg "Stoping simpsh-httpd" "simpsh-httpd"
-        start-stop-daemon --stop --quiet --name simpsh-htpd
+        start-stop-daemon --stop --quiet --pidfile /run/lock/simpsh-httpd.pid --name simpsh-htpd
         log_end_msg $?
         ;;
 restart) log_daemon_msg "Restarting simpsh-httpd" "simpsh-httpd" 
