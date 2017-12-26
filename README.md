@@ -6,7 +6,7 @@ An usable bash-httpserver with easy configuration and PHP.
 ### Installation as package (with init service)
 1. Build package: `cd ; curl https://raw.githubusercontent.com/niansa/simpsh-httpd/master/mkdeb.sh | bash -`
 2. Install package: `sudo dpkg --install ./simpsh-httpd.deb`
-3. Set owner: `/usr/share/simpsh-httpd/setowner.sh`
+3. Set owner: `sudo /usr/share/simpsh-httpd/setowner.sh`
 
 
 ### Installation (without init service)
