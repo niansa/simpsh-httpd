@@ -20,7 +20,7 @@ An usable bash-httpserver with easy configuration and PHP.
  * `ERROR404` This is the error page 404
  * `ERROR403` This is the error page 403
 4. Make all files executable
- * `chmod ~/simpsh-httpd/* +x`
+ * `chmod -R a+x ~/simpsh-httpd`
 5. Start simpsh-httpd:
  * `cd ~/simpsh-httpd`
  * `./start-socat.sh`
