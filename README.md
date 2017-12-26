@@ -6,7 +6,17 @@ An usable bash-httpserver with easy configuration and PHP.
 ### Installation as package (with init service)
 1. Build package: `cd ; curl https://raw.githubusercontent.com/niansa/simpsh-httpd/master/mkdeb.sh | bash -`
 2. Install package: `sudo dpkg --install ./simpsh-httpd.deb`
-3. Set owner: `sudo /usr/share/simpsh-httpd/setowner.sh`
+3. Edit /etc/config.sh:
+ * `FILES` Here is the webroot (homefolder for the website).
+ * `HTMLTITLE` This is the title for the filelist.
+ * `OUTFILE` The finished Document will saved here. ${OUTFILEID} must be included!
+ * `DEFAULTCONTENTTYPE` This Content-Type send the Server, if the requested File isn't a folder or phpfile.
+ * `PORT` This port will used for listening.
+ * `WEBSITE` This is the URL of the website (Example: "http://localhost:$PORT")
+ * `ERROR404` This is the error page 404
+ * `ERROR403` This is the error page 403
+4. Set owner: `sudo /usr/share/simpsh-httpd/setowner.sh`
+5. Restart simpsh-httpd: `sudo systemctl restart simpsh-httpd`
 
 
 ### Installation (without init service)
