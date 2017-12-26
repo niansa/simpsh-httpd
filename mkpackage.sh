@@ -4,7 +4,6 @@ cd "$2"
 mkdir etc
 mkdir ect/init.d
 cp ${1}/simpsh-httpd.service etc/init.d/simpsh-httpd.sh
-mkdir etc
 mkdir etc/simpsh-httpd
 mkdir usr
 mkdir usr/bin
