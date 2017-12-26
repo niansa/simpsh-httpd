@@ -15,5 +15,5 @@ echo 'cd /usr/share/simpsh-httpd/
 mv usr/share/simpsh-httpd/simpsh-httpd.service etc/init.d/simpsh-httpd.sh
 mv usr/share/simpsh-httpd/config.sh etc/simpsh-httpd
 ln -sf /etc/simpsh-httpd/config.sh usr/share/simpsh-httpd/config.sh
-chmod -R +x .
+chmod -R a+x .
 echo "Fertig! Done!"
