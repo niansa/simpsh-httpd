@@ -1,6 +1,9 @@
 echo "Bitte warten... Please wait..."
 mkdir "$2"
 cd "$2"
+mkdir lib
+mkdir lib/systemd
+cp ${1}/simpsh-httpd.service lib/systemd/systemd-simpsh-httpd
 mkdir etc
 mkdir etc/simpsh-httpd
 mkdir usr
