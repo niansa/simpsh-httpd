@@ -3,6 +3,7 @@ Description=simpsh-httpd
 
 [Service]
 WorkingDirectory=/usr/share/simpsh-httpd/
+Type=forking
 ExecStart=/usr/share/simpsh-httpd/start-socat.sh
 KillMode=process
 
