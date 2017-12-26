@@ -3,7 +3,12 @@
 An usable bash-httpserver with easy configuration and PHP.
 
 
-### Installation
+### Installation as package (with init service)
+1. Build package: `cd ; curl https://raw.githubusercontent.com/niansa/simpsh-httpd/master/mkdeb.sh | bash -`
+2. Install package: `sudo dpkg --install ./simpsh-httpd.deb`
+
+
+### Installation (without init service)
 
 1. Install following packages: `bash socat dos2unix`
 2. Download simpsh-httpd:
@@ -25,6 +30,7 @@ An usable bash-httpserver with easy configuration and PHP.
  * `cd ~/simpsh-httpd`
  * `./start-socat.sh`
 6. Have fun with simpsh-httpd!
+
 
 
 Tip: You don't need to restart simpsh-httpd after update/configchange!
