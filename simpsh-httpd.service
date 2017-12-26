@@ -25,7 +25,7 @@ start)  log_daemon_msg "Starting simpsh-httpd" "simpsh-httpd"
         log_end_msg $?
         ;;
 stop)   log_daemon_msg "Stoping simpsh-httpd" "simpsh-httpd"
-        start-stop-daemon --stop --quiet --pidfile /run/lock/simpsh-httpd.pid --name simpsh-htpd
+        cat /run/lock/simpsh-httpd.lock | xargs kill
         log_end_msg $?
         ;;
 restart) log_daemon_msg "Restarting simpsh-httpd" "simpsh-httpd" 
