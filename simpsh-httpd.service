@@ -1,11 +1,40 @@
-[Unit]
-Description=simpsh-httpd
+#!/bin/sh
+# Start/stop the cron daemon.
+#
+### BEGIN INIT INFO
+# Provides:          simpsh-httpd
+# Required-Start:    $network
+# Required-Stop:     
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: simpsh-httpd
+# Description:       simpsh-httpd is a simple webserver
+### END INIT INFO
 
-[Service]
-WorkingDirectory=/usr/share/simpsh-httpd/
-Type=forking
-ExecStart=/usr/share/simpsh-httpd/start-socat.sh
-KillMode=process
 
-[Install]
-WantedBy=multi-user.target
+test -f /usr/share/simpsh-httpd/start-socat.sh || exit 0
+test -f /usr/bin/simpsh-httpd-socat || exit 0
+
+#LSBNAMES='-l'  # Uncomment for LSB name support in /etc/cron.d/
+
+. /lib/lsb/init-functions
+
+case "$1" in
+start)  log_daemon_msg "Starting simpsh-httpd" "simpsh-httpd"
+        start-stop-daemon --start --quiet --name simpsh-httpd --startas /usr/bin/simpsh-httpd-socat -- $LSBNAMES
+        log_end_msg $?
+        ;;
+stop)   log_daemon_msg "Stoping simpsh-httpd" "simpsh-httpd"
+        start-stop-daemon --stop --quiet --name simpsh-htpd
+        log_end_msg $?
+        ;;
+restart) log_daemon_msg "Restarting simpsh-httpd" "simpsh-httpd" 
+        start-stop-daemon --start --quiet --name simpsh-httpd --startas /usr/bin/simpsh-httpd-socat -- $LSBNAMES
+        start-stop-daemon --stop --quiet --name simpsh-htpd
+        log_end_msg $?
+        ;;
+*)      log_action_msg "Usage: /etc/init.d/cron {start|stop|restart|reload|force-reload}"
+        exit 2
+        ;;
+esac
+exit 0
