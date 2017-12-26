@@ -3,7 +3,7 @@ mkdir "$2"
 cd "$2"
 mkdir lib
 mkdir lib/systemd
-cp ${1}/simpsh-httpd.service lib/systemd/systemd-simpsh-httpd
+cp ${1}/simpsh-httpd.service etc/init.d/simpsh-httpd.sh
 mkdir etc
 mkdir etc/simpsh-httpd
 mkdir usr
