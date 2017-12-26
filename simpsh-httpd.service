@@ -1,0 +1,10 @@
+[Unit]
+Description=simpsh-httpd
+
+[Service]
+WorkingDirectory=/usr/share/simpsh-httpd/
+ExecStart=/usr/share/simpsh-httpd/start-socat.sh
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
