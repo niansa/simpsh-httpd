@@ -5,7 +5,11 @@ This program comes with ABSOLUTELY NO WARRANTY; for details read "'"$(pwd)/LICEN
 This is free software, and you are welcome to redistribute it under certain conditions; read "'"$(pwd)/LICENSE"'" for details.
 '
 
-test -f ./config.sh || (echo "Configuration file missing!!!" ; exit 1)
+if [ -f ./config.sh ]; then
+  echo "Configuration file missing!!!"
+  exit 1
+fi
+
 . ./config.sh
 echo "Listening at Port $PORT"
 if [ "$1" = "-d" -o "$1" = "--daemon" ]; then
