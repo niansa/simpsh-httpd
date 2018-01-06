@@ -15,7 +15,7 @@ An usable bash-httpserver with easy configuration and PHP.
  * `WEBSITE` This is the URL of the website (Example: "http://localhost:$PORT")
  * `ERROR404` This is the error page 404
  * `ERROR403` This is the error page 403
-4. Set owner: `sudo /usr/share/simpsh-httpd/setowner.sh`
+4. Set permissions: `sudo /usr/share/simpsh-httpd/setowner.sh`
 5. Start simpsh-httpd: `simpsh-httpd-socat -d`
 
 
