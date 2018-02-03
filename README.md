@@ -5,7 +5,7 @@ An usable bash-httpserver with easy configuration and PHP.
 
 ### Installation as package
 1. Build package: `cd ; curl https://raw.githubusercontent.com/niansa/simpsh-httpd/master/mkdeb.sh | bash -`
-2. Install package: `sudo dpkg --install ./simpsh-httpd.deb`
+2. Install package: `sudo apt install bash socat dos2unix && sudo dpkg --install ./simpsh-httpd.deb`
 3. Edit /etc/config.sh:
  * `FILES` Here is the webroot (homefolder for the website).
  * `HTMLTITLE` This is the title for the filelist.
