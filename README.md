@@ -1,4 +1,6 @@
-# simpsh-httpd
+# Delevopment locked here, it has been moved to GitLab: https://gitlab.com/niansa/simpsh-httpd
+
+## simpsh-httpd
 
 An usable bash-httpserver with easy configuration and PHP.
 
